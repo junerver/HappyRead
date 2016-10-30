@@ -8,5 +8,5 @@ public class Constants {
     public static final String UMENG_APPID = "580f5b48aed179119c000dec";
 
     //数据库名称
-    public static final String DB_NAME = "cloudnote";
+    public static final String DB_NAME = "HAPPYREAD";
 }

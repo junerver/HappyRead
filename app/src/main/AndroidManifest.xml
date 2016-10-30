@@ -14,22 +14,20 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <!--拍摄照片后写文件-->
+    <!-- 拍摄照片后写文件 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
-
 
     <!--
        configChanges参数的作用是不让activity重启
        3.2之前的sdk只需要配置前面两个值:keyboardHidden|orientation
        3.2之后的sdk必须配置三个值keyboardHidden|orientation|screensize
     -->
-
     <application
         android:name=".HappyReadApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activity.SplashActivity">
@@ -40,9 +38,18 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:value="580f5b48aed179119c000dec" android:name="UMENG_APPKEY"></meta-data>
-        <meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="580f5b48aed179119c000dec"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia"/>
 
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

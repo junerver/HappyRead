@@ -13,23 +13,23 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
-    @BindView(R.id.textView)
-    TextView mTextView;
-    @BindView(R.id.ivImage)
-    ImageView mIvImage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        ButterKnife.bind(this);
+    protected void initView() {
+
     }
 
-    @OnClick(R.id.textView)
-    public void onClick() {
-        //测试工具类
-        PicassoUtils.loadCircleImageViewCrop(this,"http://ww4.sinaimg.cn/large/610dc034jw1f9469eoojtj20u011hdjy.jpg",mIvImage);
+    @Override
+    protected void initData() {
+
     }
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    
 }
